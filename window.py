@@ -29,7 +29,7 @@ def index():
 	window.fill((255,255,255))
 	flag=0
 	try:
-		url_request=urllib.request.urlopen("http://www.cs.utep.edu/cheon/ws/sudoku/new/?size=9&level=3")
+		url_request=urllib.request.urlopen("https://www.cs.utep.edu/cheon/ws/sudoku/new/?size=9&level=3")
 		squares=json.load(url_request)["squares"]
 
 		choose_level=button(BLUE,50,300,500,50,"press any num between 1 & 3 to simulate level",fontsize=15)
@@ -65,7 +65,7 @@ def index():
 			loading.draw(window)
 			pygame.display.update()
 
-			url_request=urllib.request.urlopen("http://www.cs.utep.edu/cheon/ws/sudoku/new/?size=9&level="+str(level))
+			url_request=urllib.request.urlopen("https://www.cs.utep.edu/cheon/ws/sudoku/new/?size=9&level="+str(level))
 			squares=json.load(url_request)["squares"]
 
 			window.fill((255,255,255))
